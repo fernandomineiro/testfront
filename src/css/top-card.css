@@ -1,0 +1,92 @@
+/* Top Cards */
+
+.top-cards {
+  margin-top: -2.5em;
+  padding: 0 30px;
+}
+
+.card {
+  border-radius: 0.5em;
+  overflow: hidden;
+  background: var(--card-background);
+  text-align: center;
+}
+
+.card:before {
+  content: "";
+  height: 4px;
+  display: block;
+}
+
+.card.facebook::before {
+  background-color: var(--facebook);
+}
+
+.card.twitter::before {
+  background-color: var(--twitter);
+}
+
+.card.instagram::before {
+  background-image: linear-gradient(
+    to right,
+    var(--instagram-1) 0%,
+    var(--instagram-2) 100%
+  );
+}
+
+.card.youtube::before {
+  background-color: var(--youtube);
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.75em;
+  color: var(--text-light);
+  padding-top: 1em;
+}
+
+.card-title img {
+  margin-right: 5px;
+}
+
+.card-followers {
+  margin: 1.5em 0;
+}
+
+.card-followers-number {
+  font-weight: bold;
+  font-size: 50px;
+  display: block;
+  color: var(--text-dark);
+}
+
+.card-followers-title {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.35em;
+  color: var(--text-light);
+}
+
+.card-today {
+  font-size: 0.75em;
+  font-weight: bold;
+  padding-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-today img {
+  margin-right: 0.5em;
+}
+
+.up {
+  color: var(--lime-green);
+}
+
+.down {
+  color: var(--bright-red);
+}

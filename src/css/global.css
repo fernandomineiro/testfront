@@ -1,0 +1,121 @@
+/* Base Styles */
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  /* Base Colors */
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram-1: hsl(37, 97%, 70%);
+  --instagram-2: hsl(329, 70%, 58%);
+  --youtube: hsl(348, 97%, 39%);
+  /* Light Theme */
+  --background: hsl(0, 0%, 100%);
+  --header-background: hsl(225, 100%, 98%);
+  --card-background: hsl(227, 47%, 96%);
+  --text-light: hsl(228, 12%, 44%);
+  --text-dark: hsl(230, 17%, 14%);
+  --toggle-checked-1: hsl(210, 78%, 56%);
+  --toggle-checked-2: hsl(146, 68%, 55%);
+}
+
+main {
+  background: var(--background);
+}
+
+.wrapper {
+  padding: 0 30px;
+}
+
+.grid {
+  display: grid;
+  grid-row-gap: 1.5em;
+}
+
+.up {
+  color: var(--lime-green);
+}
+
+.down {
+  color: var(--bright-red);
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1.5em;
+  }
+  .wrapper {
+    max-width: 1440px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1.5em;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark Theme */
+    --background: hsl(230, 17%, 14%);
+    --header-background: hsl(232, 19%, 15%);
+    --card-background: hsl(228, 28%, 20%);
+    --text-light: hsl(228, 34%, 66%);
+    --text-dark: hsl(0, 0%, 100%);
+    --switch: linear-gradient(
+      to right,
+      var(--toggle-checked-1) 0%,
+      var(--toggle-checked-2) 100%
+    );
+  }
+  .slider {
+    background-image: var(--switch);
+  }
+  input:checked + .slider {
+    background-color: var(--card-background);
+  }
+}
+
+.dark-mode {
+  --background: hsl(230, 17%, 14%);
+  --header-background: hsl(232, 19%, 15%);
+  --card-background: hsl(228, 28%, 20%);
+  --text-light: hsl(228, 34%, 66%);
+  --text-dark: hsl(0, 0%, 100%);
+  --switch: linear-gradient(
+    to right,
+    var(--toggle-checked-1) 0%,
+    var(--toggle-checked-2) 100%
+  );
+}
+.slider.dark-mode {
+  background-image: var(--switch);
+}
+
+.light-mode {
+  --background: hsl(0, 0%, 100%);
+  --header-background: hsl(225, 100%, 98%);
+  --card-background: hsl(227, 47%, 96%);
+  --text-light: hsl(228, 12%, 44%);
+  --text-dark: hsl(230, 17%, 14%);
+  --toggle-checked-1: hsl(210, 78%, 56%);
+  --toggle-checked-2: hsl(146, 68%, 55%);
+  --switch: linear-gradient(
+    to right,
+    var(--toggle-checked-1) 0%,
+    var(--toggle-checked-2) 100%
+  );
+}
+.slider.light-mode {
+  background-image: none;
+  background-color: var(--text-light);
+}

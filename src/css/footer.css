@@ -1,0 +1,12 @@
+/* Footer */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding-bottom: 2em;
+  color: var(--text-light);
+}
+
+.attribution a {
+  color: var(--text-dark);
+}

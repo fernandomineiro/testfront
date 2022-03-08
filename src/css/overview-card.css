@@ -1,0 +1,62 @@
+/* Overview Cards */
+
+.overview {
+  padding: 2em 30px;
+}
+
+.overview-title {
+  font-size: 1.45em;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.card-small {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 1em;
+  padding: 1.5em;
+  background-color: var(--card-background);
+  border-radius: 0.5em;
+}
+
+.card-small-title {
+  font-weight: 600;
+  font-size: 0.9em;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.card-small-icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.card-small-number {
+  font-weight: bold;
+  font-size: 2em;
+  margin: 0;
+  display: flex;
+  line-height: 0.9;
+  color: var(--text-dark);
+}
+
+.card-small-percentage {
+  font-size: 0.75em;
+  font-weight: bold;
+  text-align: right;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.card-small-percentage span {
+  display: flex;
+  align-items: center;
+}
+
+.card-small-percentage img {
+  margin-right: 0.2em;
+}
